@@ -80,7 +80,18 @@ This helped boost model accuracy while reducing overfitting.
 - Volume over time  
 - Prediction vs Actual labels (sample of 50)
 
----
+**Stock Price with MA5 / MA20 / MA50**
+
+![Price Chart](charts/MovingAverage.png)
+
+**RSI Over Time**
+
+![RSI Chart](charts/RSI.png)
+
+**Volume Over Time**
+
+![Volume Chart](charts/VOLUME.png)
+
 
 ## 🎯 Results
 

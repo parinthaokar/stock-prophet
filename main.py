@@ -4,11 +4,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
-
 import matplotlib.pyplot as plt
 
+ticker = input("Enter Stock Ticker Symbol (e.g. AAPL, MSFT, TSLA): ").upper()
 
-ticker = input("Enter Stock Ticker Symbol (e.g. , AAPL, MSFT, TSLA: )").upper()
 
 df = yf.download(ticker,start = '2020-01-01', end = '2024-12-31', auto_adjust=False)
 
@@ -129,3 +128,7 @@ plt.ylabel('Class')
 plt.legend()
 plt.grid(True)
 plt.show()
+
+
+# Save the best model
+joblib.dump(best_rf, "apple_rf_model.pkl")
